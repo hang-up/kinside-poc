@@ -151,7 +151,7 @@ export default {
     padding: 1rem 2rem;
     transform: translateY(
       270px
-    ); // This value works because of each item's fixed height of 300px.
+    ); // This value works because of each item's fixed height of 400px.
 
     header {
       color: var(--color-heading);

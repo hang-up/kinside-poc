@@ -9,7 +9,7 @@ const useMoviesStore = defineStore({
   }),
   getters: {
     /**
-     * Returns a list of filtered movies based on the search query.
+     * Return a list of filtered movies based on the search query.
      *
      * @param {Object} state Current state
      * @returns Array Array of filtered movies based on the search query

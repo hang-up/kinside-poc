@@ -1,3 +1,20 @@
+<script>
+import debounce from "debounce";
+import { useMoviesStore } from "@/stores/movies";
+
+export default {
+  setup() {
+    const store = useMoviesStore();
+
+    const handleFilter = debounce((e) => {
+      store.filterBy = e.target.value;
+    }, 500);
+
+    return { handleFilter };
+  },
+};
+</script>
+
 <template>
   <div id="topbar">
     <img src="/src/assets/logo.png" alt="Cinematch" id="logo" />
@@ -16,23 +33,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import debounce from "debounce";
-import { useMoviesStore } from "@/stores/movies";
-
-export default {
-  setup() {
-    const store = useMoviesStore();
-
-    const handleFilter = debounce((e) => {
-      store.filterBy = e.target.value;
-    }, 500);
-
-    return { handleFilter };
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 #topbar {

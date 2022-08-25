@@ -27,7 +27,9 @@ export default {
 
 <template>
   <main>
-    <div v-if="hasErrors">Error loading movies</div>
+    <div v-if="hasErrors" class="text-white text-center font-bold">
+      Error loading movies
+    </div>
     <MoviesGrid v-else :movies="store.filteredMovies" />
   </main>
 </template>

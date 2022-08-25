@@ -28,6 +28,10 @@ input[type="text"] {
   color: var(--vt-c-white-soft)
 }
 
+.text-center {
+  text-align: center;
+}
+
 // Transitions.
 .list-enter-active,
 .list-leave-active {

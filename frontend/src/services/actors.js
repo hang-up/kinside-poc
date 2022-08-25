@@ -2,7 +2,7 @@ import { useAxios } from "@/composable/use-axios";
 const { get } = useAxios();
 
 /**
- * Movies Service.
+ * Actors Service.
  * Endpoint: /actors.
  *
  */
