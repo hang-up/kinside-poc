@@ -33,18 +33,18 @@ export default {
     height: 400px;
     margin: 0.5rem;
     flex: 0 0 calc(25% - 1rem);
-    @media screen and (max-width: var(--screen-lg)) {
+    @media screen and (max-width: $screen-lg) {
       & {
         flex: 0 0 calc(33% - 1rem);
       }
     }
 
-    @media screen and (max-width: var(--screen-md)) {
+    @media screen and (max-width: $screen-md) {
       & {
         flex: 0 0 calc(50% - 1rem);
       }
     }
-    @media screen and (max-width: var(--screen-sm)) {
+    @media screen and (max-width: $screen-sm) {
       & {
         flex: 0 0 calc(100% - 1rem);
       }

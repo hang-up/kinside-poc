@@ -1,6 +1,6 @@
 <template>
   <div id="topbar">
-    <img src="/src/assets/logo.png" alt="Cinematch" />
+    <img src="/src/assets/logo.png" alt="Cinematch" id="logo" />
     <input
       type="text"
       name="filter"
@@ -40,18 +40,45 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 0 5vw;
-}
 
-.authentication {
-  align-items: center;
-  display: flex;
-
-  .username {
-    color: var(--color-heading);
-    margin-right: 0.5rem;
+  & #logo {
+    @media screen and (max-width: $screen-md) {
+      & {
+        display: none;
+      }
+    }
   }
-  img {
-    border-radius: 100%;
+
+  & #filter {
+    @media screen and (max-width: $screen-md) {
+      & {
+        width: 90%;
+      }
+    }
+  }
+
+  & .authentication {
+    align-items: center;
+    display: flex;
+
+    @media screen and (max-width: $screen-md) {
+      & > p {
+        display: none;
+      }
+    }
+
+    .username {
+      color: var(--color-heading);
+      margin-right: 0.5rem;
+      @media screen and (max-width: $screen-md) {
+        & {
+          display: none;
+        }
+      }
+    }
+    img {
+      border-radius: 100%;
+    }
   }
 }
 </style>
